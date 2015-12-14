@@ -50,6 +50,7 @@ public class UserGUI {
 	private int i = 0;
 	private JTextField txtIBAN;
 	private JCheckBox chckbxNewCheckBox;
+	private JTextField txtEMail;
 	/**
 	 * Launch the application.
 	 */
@@ -80,7 +81,7 @@ public class UserGUI {
 		frame = new JFrame();
 		frame.setBackground(Color.DARK_GRAY);
 		frame.getContentPane().setBackground(Color.DARK_GRAY);
-		frame.setBounds(100, 100, 323, 412);
+		frame.setBounds(100, 100, 323, 454);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -95,25 +96,30 @@ public class UserGUI {
 		txtLastname.setBounds(10, 67, 140, 20);
 		CreateStandardTextfield(txtLastname,"lastname","Lastname");
 		
+		txtEMail = new JTextField();
+		txtEMail.setBounds(10, 98, 140, 20);
+		frame.getContentPane().add(txtEMail);
+		CreateStandardTextfield(txtEMail, "email", "E-Mail");
+		
 		
 		txtCountry = new JTextField();
 		frame.getContentPane().add(txtCountry);
-		txtCountry.setBounds(10, 98, 140, 20);
+		txtCountry.setBounds(10, 129, 140, 20);
 		CreateStandardTextfield(txtCountry, "country", "Country");
 		
 		txtCity = new JTextField();
 		frame.getContentPane().add(txtCity);
-		txtCity.setBounds(10, 129, 140, 20);
+		txtCity.setBounds(10, 160, 140, 20);
 		CreateStandardTextfield(txtCity, "city", "City");
 		
 		txtStreet = new JTextField();
 		frame.getContentPane().add(txtStreet);
-		txtStreet.setBounds(10, 160, 140, 20);
+		txtStreet.setBounds(10, 191, 140, 20);
 		CreateStandardTextfield(txtStreet, "street", "Street");
 		
 		txtIBAN = new JTextField();
 		frame.getContentPane().add(txtIBAN);
-		txtIBAN.setBounds(10, 251, 140, 20);
+		txtIBAN.setBounds(10, 282, 140, 20);
 		CreateStandardTextfield(txtIBAN, "iban", "IBAN Number for Bank Actions");
 		
 		
@@ -129,7 +135,7 @@ public class UserGUI {
 		natalDayPicker.getJFormattedTextField().setForeground(new Color(0, 0, 0));
 		natalDayPicker.getJFormattedTextField().setBackground(Color.LIGHT_GRAY);
 		frame.getContentPane().add(natalDayPicker);
-		natalDayPicker.setBounds(10, 217, 140, 23);
+		natalDayPicker.setBounds(10, 248, 140, 23);
 		
 		//Labels ----------------------------------------------------------------------- Labels//
 		JLabel lblRegistration = new JLabel("Registration");
@@ -145,20 +151,20 @@ public class UserGUI {
 		btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnSubmit.setForeground(new Color(0, 0, 0));
 		btnSubmit.setBackground(Color.LIGHT_GRAY);
-		btnSubmit.setBounds(10, 347, 89, 23);
+		btnSubmit.setBounds(10, 382, 89, 23);
 		frame.getContentPane().add(btnSubmit);
 		
 		btnCancel = new JButton("Cancel");
 		btnCancel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnCancel.setForeground(new Color(0, 0, 0));
 		btnCancel.setBackground(Color.LIGHT_GRAY);
-		btnCancel.setBounds(109, 347, 89, 23);
+		btnCancel.setBounds(109, 382, 89, 23);
 		frame.getContentPane().add(btnCancel);
 		
 		JCheckBox ckbxStudent = new JCheckBox("Student?");
 		ckbxStudent.setForeground(Color.LIGHT_GRAY);
 		ckbxStudent.setBackground(Color.DARK_GRAY);
-		ckbxStudent.setBounds(10, 187, 97, 23);
+		ckbxStudent.setBounds(10, 218, 97, 23);
 		frame.getContentPane().add(ckbxStudent);
 		
 		
@@ -166,7 +172,7 @@ public class UserGUI {
 		chckbxNewCheckBox = new JCheckBox("<html>I've read and accepted <br/>the User Agreement</html>");
 		chckbxNewCheckBox.setForeground(Color.LIGHT_GRAY);
 		chckbxNewCheckBox.setBackground(Color.DARK_GRAY);
-		chckbxNewCheckBox.setBounds(10, 307, 295, 33);
+		chckbxNewCheckBox.setBounds(10, 342, 295, 33);
 		frame.getContentPane().add(chckbxNewCheckBox);
 		btnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
