@@ -36,17 +36,19 @@ public class BankConnector {
 	}
 	private String randomUsage(Double amount){
 		Random usageNumber = new Random();
-		int actionUsage = usageNumber.nextInt(2);
+		int actionUsage = usageNumber.nextInt(3);
 		if(amount<0){
 			switch(actionUsage){
 			case 0: return "Steuer-nachzahlungen";
 			case 1: return "Stromkostenabrechnung";
+			case 2: return "Waffenfähiges plutonium";
 			default:return "Anwaltskosten";
 			}
 		}else{
 			switch(actionUsage){
 			case 0: return "Lohnauszahlung";
 			case 1: return "Kindergeld";
+			case 2: return "Erpressungsgelder Klausens gmbh";
 			default:return "Gewinnauszahlung";
 			}
 			

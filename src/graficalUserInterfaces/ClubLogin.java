@@ -133,8 +133,17 @@ public class ClubLogin  {
 		});
 		frame.getContentPane().add(btnCancel);
 		
-		
-		
+		//Action Listener for textfields ----------------------------------------------------------------blablabla//
+		txtUsername.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				txtPassword.grabFocus();
+			}
+		});
+		txtPassword.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				btnSubmit.doClick();
+			}
+		});
 		
 	}
 	
