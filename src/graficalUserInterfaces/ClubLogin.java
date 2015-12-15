@@ -110,8 +110,8 @@ public class ClubLogin  {
 			public void actionPerformed(ActionEvent e) {
 				if(txtUsername.getText().equals("Admin")&&txtPassword.getText().equals("123456")){
 					ClubGUI club = new ClubGUI(frame);
-					club.getFrame().setVisible(true);
 					frame.dispose();
+					club.getFrame().setVisible(true);
 				}else{
 					lblWrongLogin.setVisible(true);
 				}

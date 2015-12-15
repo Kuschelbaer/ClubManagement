@@ -14,7 +14,7 @@ public class BankConnector {
 	}
 	public Double getAcountBalance(BankAcountData bankAcount){
 		Random acountBalanceGenerator = new Random();
-		Double balance = (double) ((acountBalanceGenerator.nextInt(480)+20)+acountBalanceGenerator.nextInt(100)/100);
+		Double balance = (double) ((acountBalanceGenerator.nextInt(980)+20)+acountBalanceGenerator.nextInt(100)/100);
 		return balance;
 	}
 	public BankAcountAction[] getAcountActions(BankAcountData bankAcount){
@@ -42,6 +42,7 @@ public class BankConnector {
 			case 0: return "Steuer-nachzahlungen";
 			case 1: return "Stromkostenabrechnung";
 			case 2: return "Waffenfähiges plutonium";
+			case 3: return "Auftragsmord Matthies";
 			default:return "Anwaltskosten";
 			}
 		}else{
@@ -49,9 +50,9 @@ public class BankConnector {
 			case 0: return "Lohnauszahlung";
 			case 1: return "Kindergeld";
 			case 2: return "Erpressungsgelder Klausens gmbh";
+			case 3: return "Auftragsmord vergütung";
 			default:return "Gewinnauszahlung";
 			}
-			
 		}
 	}
 	private Double actionAmount(){
