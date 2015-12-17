@@ -5,9 +5,17 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import bankClasses.BankAcountAction;
+import bankClasses.BankAcountData;
+import bankClasses.BankConnector;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ClubGUI {
 
@@ -46,6 +54,21 @@ public class ClubGUI {
 		lblNewLabel.setForeground(Color.LIGHT_GRAY);
 		lblNewLabel.setBounds(132, 103, 190, 20);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JButton btnAcountActions = new JButton("show Bank Actions");
+		btnAcountActions.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				BankConnector connect = new BankConnector();
+				BankAcountData bankAcount = new BankAcountData(null, null, null, null, null, null, null, null);
+				BankAcountAction[] actions = connect.getAcountActions(bankAcount);
+				for (BankAcountAction bankAcountAction : actions) {
+					System.out.println(bankAcountAction.getActionDate() + " : " + bankAcountAction.getActionUsage() + " : " + bankAcountAction.getActionSum());
+				}
+				System.out.println("==================================");
+			}
+		});
+		btnAcountActions.setBounds(10, 11, 143, 23);
+		frame.getContentPane().add(btnAcountActions);
 	}
 	public JFrame getFrame(){
 		return frame;

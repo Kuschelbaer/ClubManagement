@@ -110,8 +110,8 @@ public class ClubLogin  {
 			public void actionPerformed(ActionEvent e) {
 				if(txtUsername.getText().equals("Admin")&&txtPassword.getText().equals("123456")){
 					ClubGUI club = new ClubGUI(frame);
-					club.getFrame().setVisible(true);
 					frame.dispose();
+					club.getFrame().setVisible(true);
 				}else{
 					lblWrongLogin.setVisible(true);
 				}
@@ -133,8 +133,17 @@ public class ClubLogin  {
 		});
 		frame.getContentPane().add(btnCancel);
 		
-		
-		
+		//Action Listener for textfields ----------------------------------------------------------------blablabla//
+		txtUsername.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				txtPassword.grabFocus();
+			}
+		});
+		txtPassword.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				btnSubmit.doClick();
+			}
+		});
 		
 	}
 	

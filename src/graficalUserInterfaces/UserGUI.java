@@ -32,7 +32,7 @@ import java.util.Properties;
 import org.jdatepicker.impl.*;
 import org.jdatepicker.util.*;
 
-import Objects.DateLabelFormatter;
+import clubClasses.DateLabelFormatter;
 
 import org.jdatepicker.*;
 import javax.swing.JCheckBox;
